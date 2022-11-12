@@ -1,7 +1,13 @@
 package main
 
-import "github.com/pablodz/wakeup-remoter/internal/server"
+import (
+	"fmt"
+	"os"
+
+	"github.com/pablodz/wakeup-remoter/internal/server"
+)
 
 func main() {
+	fmt.Println("uid", os.Geteuid())
 	server.ServeWakeUpRemoter()
 }
